@@ -60,3 +60,16 @@ for ($i = 0; $i < count($beli); $i++) {
     echo "Jumlah Beli: $kuantitas <br>";
     echo "Total Harga :" . $total_item . "<br>";
 }
+
+// 4. Commit 4 - Output akhir
+
+// Tambahkan garis pemisah
+echo "<hr>";
+
+// Cetak Total Belanja
+echo "<h3>Total Belanja</h3>";
+echo "<p>Rp. " . number_format($grandtotal, 0, ',', '.') . "</p>";
+
+// Rapikan tampilan output (sudah dilakukan dengan tag HTML)
+
+?>
