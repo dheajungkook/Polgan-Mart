@@ -41,37 +41,3 @@ for ($i = 0; $i < $jumlah_pembelian; $i++) {
     $jumlah[] = $item_jumlah;
 }
 
-// 3. Commit 3 - Perhitungan total
-
-echo "<h3>Detail Pembelian</h3>";
-
-// Tambahkan foreach untuk menampilkan detail pembelian
-for ($i = 0; $i < count($beli); $i++) {
-    $nama = $beli[$i];
-    $kuantitas = $jumlah[$i];
-    $indeks_harga = array_search($nama, $nama_barang);
-    $harga = $harga_barang[$indeks_harga];
-
-    // Hitung total per item dan akumulasi ke $grandtotal
-    $total_item = $harga * $kuantitas;
-    $total[] = $total_item;
-    $grandtotal += $total_item;
-    
-    echo "Nama Barang :$nama <br>";
-    echo "Harga Barang: Rp. " . $harga . "<br>";
-    echo "Jumlah Beli: $kuantitas <br>";
-    echo "Total Harga :" . $total_item . "<br>";
-}
-
-// 4. Commit 4 - Output akhir
-
-// Tambahkan garis pemisah
-echo "<hr>";
-
-// Cetak Total Belanja
-echo "<h3>Total Belanja</h3>";
-echo "<p>Rp. " . number_format($grandtotal, 0, ',', '.') . "</p>";
-
-// Rapikan tampilan output (sudah dilakukan dengan tag HTML)
-
-?>
